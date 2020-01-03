@@ -28,6 +28,8 @@ const (
 	SRV
 	// TXT is a text record type
 	TXT
+	// CAA is a certification record type
+	CAA
 )
 
 func (rt RecordType) String() string {
@@ -46,6 +48,8 @@ func (rt RecordType) String() string {
 		return SOAType
 	case TXT:
 		return TXTType
+	case CAA:
+		return CAAType
 	}
 	return ""
 }
@@ -65,10 +69,11 @@ const (
 	NSType    = "NS"
 	SOAType   = "SOA"
 	TXTType   = "TXT"
+	CAAType   = "CAA"
 )
 
 var supportedTypes = []string{
-	AType, AAAAType, CNameType, MXType, NSType, SOAType, TXTType,
+	AType, AAAAType, CNameType, MXType, NSType, SOAType, TXTType, CAAType,
 }
 
 // Domain encapsulates a domain resource

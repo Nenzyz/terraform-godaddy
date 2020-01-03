@@ -56,6 +56,7 @@ types include:
 * NS
 * SOA
 * TXT
+* CAA
 
 ```terraform
 resource "godaddy_domain_record" "gd-fancy-domain" {
@@ -98,6 +99,10 @@ This plugin also supports Terraform's [import](https://www.terraform.io/docs/imp
 through `terraform plan` and update the resource configuration accordingly to preserve existing data. The supplied resource `id` to the `terraform import` command should
 be the name of the domain that you would like to import. Although this is currently a manual workaround, this plugin will be updated when Terraform includes support for
 fully automated imports.
+
+## Building
+
+docker run --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp -e GOOS=darwin -e GOARCH=amd64 golang:1 bash
 
 ## License
 

@@ -19,7 +19,7 @@ case "$os" in
     file=$(printf "%s_%s_%s" $plugin $os $arch)
     archive="$file.tgz"
 
-    cd /tmp && curl -fOsSL https://github.com/n3integration/$plugin/releases/download/v$version/$archive 2>/dev/null
+    cd /tmp && curl -fOsSL https://github.com/Nenzyz/$plugin/releases/download/v$version/$archive 2>/dev/null
 
     if [ ! -f /tmp/$archive ]; then
       echo "ERROR"
