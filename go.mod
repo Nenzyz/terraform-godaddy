@@ -1,4 +1,4 @@
-module github.com/n3integration/terraform-godaddy
+module github.com/Nenzyz/terraform-godaddy
 
 require (
 	github.com/hashicorp/hcl v1.0.0 // indirect
