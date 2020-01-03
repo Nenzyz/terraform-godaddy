@@ -28,7 +28,7 @@ const (
 	SRV
 	// TXT is a text record type
 	TXT
-	// CAA is a certification record type
+	// CAA is a certification authority record type
 	CAA
 )
 
@@ -177,7 +177,7 @@ func IsDefaultNSRecord(record *DomainRecord) bool {
 
 // IsDisallowed prevents empty NS|SOA record lists from being propagated, which is disallowed
 func IsDisallowed(t string, records []*DomainRecord) bool {
-	return len(records) == 0 && strings.EqualFold(t, NSType) || strings.EqualFold(t, SOAType)
+	return len(records) == 0 && strings.EqualFold(t, NSType) || strings.EqualFold(t, SOAType) || strings.EqualFold(t, CAAType)
 }
 
 func isSupportedType(recType string) bool {
